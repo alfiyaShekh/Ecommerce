@@ -1,0 +1,46 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Poppins", sans-serif;
+    
+}
+/* To section with brand name */
+.navbarr{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    position: fixed;
+}
+.title{
+    width: 100%;
+}
+
+
+/* navigation Bar */
+.nav{
+       display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    margin-top: 80px;
+  
+    width:100%;
+ 
+}
+.navbar{
+    background-color: whitesmoke;
+    
+}
+
+    
+#home img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 930px;
+}
