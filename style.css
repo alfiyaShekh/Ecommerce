@@ -37,10 +37,79 @@ body{
     
 }
 
-    
+/* home page */ 
 #home img {
     width: 100%;
     height: auto;
     object-fit: cover;
     max-height: 930px;
 }
+.home-text{
+    position: absolute;
+    top: 45%;
+    left:30%;
+    transform: translate(-50%, -50%);
+    color: black;
+    
+}
+.green{
+    font-size: 90px;
+}
+
+
+
+/* media query mobile */
+@media (max-width: 768px) {
+        
+#home img{
+    height: 600px;
+    width: 100%;
+    object-fit: cover;
+    background-position: center;
+    background-size: contain;
+}
+
+.navbarr{
+    height: 35px;
+}
+.nav{
+    margin-top: 60px;
+    
+}
+
+
+/* home page*/
+.home-text{
+    position: absolute;
+    top: 35%;
+    left:37%;
+    transform: translate(-50%, -50%);
+    color: black;
+    
+}
+.green{
+    font-size: 50px;
+}
+.sub-text{
+    font-size: 15px;
+}
+ }
+ 
+
+ /* media query tablet */
+ @media (min-width: 767px) and (max-width:991px){
+    /* home page*/
+    .green{
+        font-size: 50px;
+        
+     
+}
+.home-text{
+    position: absolute;
+    top: 35%;
+    left:37%;
+    transform: translate(-50%, -50%);
+    color: black;
+    
+}
+ }
