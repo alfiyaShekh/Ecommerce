@@ -5,7 +5,7 @@
 }
 body{
     font-family: "Poppins", sans-serif;
-    
+     
 }
 /* To section with brand name */
 .navbarr{
@@ -15,6 +15,7 @@ body{
     justify-content: center;
     flex-direction: row;
     position: fixed;
+    z-index: 1000;
 }
 .title{
     width: 100%;
@@ -28,7 +29,7 @@ body{
     align-items: center;
     position: fixed;
     margin-top: 80px;
-  
+   z-index: 1000;
     width:100%;
  
 }
@@ -38,11 +39,18 @@ body{
 }
 
 /* home page */ 
+#home{
+    position: relative;   
+    min-height: 100vh;   
+}
+
 #home img {
     width: 100%;
-    height: auto;
+    /* height: auto; */
     object-fit: cover;
     max-height: 930px;
+    height: 100vh;
+    
 }
 .home-text{
     position: absolute;
@@ -56,24 +64,59 @@ body{
     font-size: 90px;
 }
 
+/* about us */
 
+#about{
+    margin: 0;
+    padding: 0;
+}
+.information{
+    /* background-color: pink; */
+    /* height: 200px; */
+    gap:80px;
+}
+.info-img{
+    background-color: yellow;
+    height: 450px;
+    width: 550px;
+}
+.info-img img{
+    height: 450px;
+    width: 550px;
+}
+.info{
+    /* background-color: pink; */
+     height: 450px;
+    width: 550px;
+    padding: 10px;
+}
+.fa-regular{
+    color: green;
+}
 
 /* media query mobile */
 @media (max-width: 768px) {
-        
-#home img{
-    height: 600px;
-    width: 100%;
+#home{
+   
+   height: 60vh;
+   min-height: unset;
+   overflow: hidden;
+ /* border: 5px orange dashed; */
+}
+.home-img{
+    height: 100%;
+   max-height: 60vh;
+   width: 100%;
+      
     object-fit: cover;
-    background-position: center;
-    background-size: contain;
+    
 }
 
 .navbarr{
     height: 35px;
 }
 .nav{
-    margin-top: 60px;
+    margin-top: 55px;
     
 }
 
@@ -81,7 +124,7 @@ body{
 /* home page*/
 .home-text{
     position: absolute;
-    top: 35%;
+    top: 53%;
     left:37%;
     transform: translate(-50%, -50%);
     color: black;
@@ -89,27 +132,50 @@ body{
 }
 .green{
     font-size: 50px;
+    
 }
 .sub-text{
     font-size: 15px;
 }
+/*about us*/
+ .information{
+    
+ }
+
  }
  
-
  /* media query tablet */
  @media (min-width: 767px) and (max-width:991px){
     /* home page*/
     .green{
         font-size: 50px;
+        /* color: green; */
         
      
 }
+#home{
+   
+   height: 70vh;
+   min-height: unset;
+   overflow: hidden;
+ /* border: 5px orange dashed; */
+}
+.home-img{
+    height: 100%;
+   max-height: 70vh;
+   width: 100%;
+      
+    object-fit: cover;
+    
+}
+
 .home-text{
     position: absolute;
-    top: 35%;
+    top: 50%;
     left:37%;
     transform: translate(-50%, -50%);
     color: black;
     
 }
+
  }
