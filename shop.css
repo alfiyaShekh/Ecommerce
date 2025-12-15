@@ -5,7 +5,7 @@
 }
 body{
     font-family: "Poppins", sans-serif;
-    background-color: rgb(241, 237, 237);
+    background-color: rgb(248, 233, 233);
      
 }
 .nav{
@@ -43,4 +43,53 @@ body{
 }
 .sign{
     font-size: 10px;
+}
+
+/********* producst section ********* */
+.products{
+    display: flex;
+    
+    width: 100%;
+    /* background-color: aqua; */
+    flex-wrap: wrap;
+    padding: 50px;
+    justify-content: space-around;
+}
+.product{
+    width: 300px;
+    height: 450px;
+    background-color: white;
+    padding: 20px;
+    /* border: 1px solid black; */
+    position: relative;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    margin-top: 20px;
+}
+.img{
+    width:250px;
+    height: 230px;
+    background-color:  rgb(241, 237, 237);;
+    background-image: url("images/sample.png");
+    background-position: center;
+    background-size: cover;
+    
+}
+.fa-star{
+    font-size:15px;
+    color: gold;
+}
+.info{
+    text-align: center;
+    /* background-color: blueviolet; */
+}
+.favourite{
+    border: none;
+    background-color: white;
+    font-size: 20px;
+    margin-left: 230px;
+}
+.product:hover{
+    
+  transform: scale(1.03); /* makes div larger */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
 }
