@@ -7,7 +7,7 @@ body{
     font-family: "Poppins", sans-serif;
      
 }
-/* To section with brand name */
+/********** To section with brand name ************/
 .navbarr{
     width: 100%;
     display: flex;
@@ -22,7 +22,7 @@ body{
 }
 
 
-/* navigation Bar */
+/*********** navigation Bar *************/
 .nav{
        display: flex;
     justify-content: center;
@@ -38,7 +38,7 @@ body{
     
 }
 
-/* home page */ 
+/************ home page ************/ 
 #home{
     position: relative;   
     min-height: 100vh;   
@@ -64,7 +64,7 @@ body{
     font-size: 90px;
 }
 
-/* about us */
+/****** about us **********/
 
 #about{
     margin: 0;
@@ -94,7 +94,108 @@ body{
     color: green;
 }
 
-/* media query mobile */
+/****** contact us **********/
+.contact-img{
+    width: 100%;
+    height:85vh;
+    /* background-color: pink; */
+    background-image: url("https://images.pexels.com/photos/5416013/pexels-photo-5416013.jpeg");
+    background-position: center;
+    background-size: cover;
+    /* opacity: 0.6; */
+    position: relative; 
+    text-align: center;
+    padding-top: 20px;
+    
+}
+.contact-img::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(13, 38, 63, 0.75); /* bluish overlay */
+}
+.contact-img h1,
+.contact-img p{
+    position: relative;
+    color:white; 
+}
+
+.address{
+     height: 50vh;
+    /* width: 200px; */ 
+    /* background-color: pink; */
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    
+}
+.add{
+    position: relative;
+    /* background-color:aqua; */
+    height: 50vh;
+    width: 500px;
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    gap: 1px;
+}
+/* .add div{
+    
+    /* background-color: blue;
+}*/
+
+.add1{
+    /* background-color: #fff; */
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 2px;
+    color: white;
+    position: relative;
+}
+
+.icon{
+    position: relative;
+    color: white;
+    font-size: 50px;
+}
+.valuee{
+    /* background-color: rgb(255, 178, 127); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding-left: 10px;
+}
+.msg{
+    background-color: #fff;
+    height: 50vh;
+    width: 500px;
+    border-radius: 10px;
+    padding: 10px;
+   
+}
+
+.msg input,textarea{
+    border: none;
+    border-bottom: 1px solid black;
+}
+input,textarea:focus {
+  outline: none;
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
+  
+}
+form{
+    gap:50px;
+    padding: 20px;
+}
+.foot{
+    height: 50px;
+    width: 100%;
+    background-color: rgb(189, 231, 134);
+}
+/***** media query mobile *******/
 @media (max-width: 768px) {
 #home{
    

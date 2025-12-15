@@ -44,7 +44,7 @@
   width: 100%;
   height: 100%;
   border-radius: 10%;
-  background-color: #1369ce;
+  background-color: #81f165;
   position: absolute;
   top: 0;
   left: 0;
@@ -76,7 +76,7 @@
   width: 100%;
   padding: 0;
   margin: 0;
-  background-color: #1369ce;
+  background-color: #81f165;
   position: absolute;
   bottom: -100px;
   left: 0;
@@ -101,6 +101,6 @@
 }
 
 .our-team .social li a:hover {
-  color: #1369ce;
+  color: #81f165;
   background-color: #f7f5ec;
 }
