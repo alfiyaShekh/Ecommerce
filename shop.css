@@ -46,50 +46,147 @@ body{
 }
 
 /********* producst section ********* */
-.products{
-    display: flex;
-    
-    width: 100%;
-    /* background-color: aqua; */
-    flex-wrap: wrap;
-    padding: 50px;
-    justify-content: space-around;
+
+ .products{
+         width: 100%;
+         display: flex;
+         /* background-color: aqua; */
+         flex-wrap: wrap;
+         justify-content: space-around;
+         padding: 20px;
+         gap:30px;
+
+ }
+
+ .product{
+      display: grid;
+      grid-template-rows: repeat(2,1fr);
+      height: 580px;
+      width: 350px;
+      background-color: white;
+      padding: 10px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      margin-bottom: 10px;
+    }
+    .img-section{
+      background-color: #f8dede;
+      position: relative; 
+    }
+    .img{
+      /* background-image: url("images/sample.png"); */
+      width: 270px;
+      height: 290px;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      /* background-color: yellow; */
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+    }
+    .img1{
+        background-image: url("images/cream1.png");
+    }
+    .img2{
+        background-image: url("images/cream2.png");
+    }
+    .img3{
+        background-image: url("images/cream3.png");
+    }
+    .img4{
+        background-image: url("images/cream4.png");
+    }
+    .img5{
+        background-image: url("images/cream5.png");
+    }
+    .img6{
+        background-image: url("images/cream6.png");
+    }
+    .img7{
+        background-image: url("images/cream7.png");
+    }
+    .img8{
+        background-image: url("images/cream8.png");
+    }
+    .img-section p{
+      background-color: red;
+      display: inline;
+      position: absolute;
+     left:3%;
+     top:3%;
+     padding: 3px;
+     border-radius: 8px;
+     color: white;
+    }
+    .favourite{
+      position: absolute;
+      right: 3%;
+      top: 3%;
+      background-color: white;
+      font-size: 20px;
+      color: red;
+      padding: 3px;
+      border-radius: 8px;
+    }
+ 
+/***** info section*****/
+.fa-star,.fa-star-half,.fa-star-half-stroke{
+      color: gold;
+      font-size: 10px;
+      
+    }
+    .info{
+      /* background-color: beige; */
+      padding: 10px;
+    }
+    .info p{
+      font-size: 10px;
+      color: grey;
+    }
+    .info h1:first-of-type{
+        font-family:"Oswald", sans-serif;
+        letter-spacing: -0.5px;
+        
+    }
+    .currency {
+ 
+  font-size: 32px;
+  font-weight: 600;
+  
 }
-.product{
-    width: 300px;
-    height: 450px;
-    background-color: white;
-    padding: 20px;
-    /* border: 1px solid black; */
-    position: relative;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    margin-top: 20px;
+
+.amount {
+   font-size: 16px;
+   text-decoration: line-through;
+   color: gray;
 }
-.img{
-    width:250px;
-    height: 230px;
-    background-color:  rgb(241, 237, 237);;
-    background-image: url("images/sample.png");
-    background-position: center;
-    background-size: cover;
-    
+.buy{
+  width: 100%;
+  padding: 7px;
+  font-size: 15px;
+  border-radius: 10px;
+  background-color: rgb(3, 3, 253);
+  color: white;
+  border: none;
 }
-.fa-star{
-    font-size:15px;
-    color: gold;
-}
-.info{
-    text-align: center;
-    /* background-color: blueviolet; */
-}
-.favourite{
-    border: none;
-    background-color: white;
-    font-size: 20px;
-    margin-left: 230px;
+.buy:hover{
+    background-color: green;
 }
 .product:hover{
     
-  transform: scale(1.03); /* makes div larger */
+  transform: scale(1.03); 
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+.floating{
+    /* background-color:rgb(174, 233, 98); */
+    /* color: white; */
+     background: #a8e063;
+  color: #1a1a1a;
+  font-weight: 700;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
