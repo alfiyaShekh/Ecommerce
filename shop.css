@@ -16,7 +16,27 @@ body{
     /* background-color: pink; */
     padding:10px;
     gap:15px;
+    
 }
+.sample{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+}
+.search{
+    height: 35px;
+    margin-right: auto;
+}
+.search-icon{
+    border-radius: 7px;
+    background-color: green;
+    color:white;
+    height: 35px;
+    font-size: 25px;
+}
+
 .shopping-cart{
     /* background-color: yellow; */
     /* display: flex; */
@@ -144,11 +164,12 @@ body{
       font-size: 10px;
       color: grey;
     }
-    .info h1:first-of-type{
+    .info h2:first-of-type{
         font-family:"Oswald", sans-serif;
         letter-spacing: -0.5px;
         
     }
+    
     .currency {
  
   font-size: 32px;
