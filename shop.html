@@ -16,6 +16,22 @@
     </style>
 </head>
 <body>
+  <div class="popup" id="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closePopup()"><i class="fa-solid fa-xmark" style="font-size: 15px;"></i></span>
+    <h2>Added Product In cart</h2>
+    <p class="emptyCart">No products in cart</p>
+    <div id="products">
+      <img src="images/empty.webp" height="300px" id="empty">
+      <div class="div">Prouct Name</div>
+      <div class="div">Price</div>
+      <div class="div">Remove</div>
+    </div>
+    
+  </div>
+</div>
+
+  </div>
  <nav class="navbar" style="background-color:rgb(8, 8, 8);">
   <div class="sample d-flex align-items-center w-100" >
     
@@ -35,14 +51,14 @@
 </nav>
 <div class="floating">
   <marquee><i class="fa-solid fa-burst" style="font-size: 20px; color: red;"></i> Nourish ,Repair, Glow Naturally with Our Premium Face Creams • Free Shipping on All Cream Orders Above ₹999 • Special Offers applied 
-    • Flat 50% OFF on All Face Creams – Limited Time Offer • Buy 2 Get 1 Free on All Skincare Essentials
+    • Flat 50% OFF on All Face Creams – Limited Time Offer • Buy 2 Get 1 Free on All Skincare Essentials<i class="fa-solid fa-burst" style="font-size: 20px; color: red;"></i>
   </marquee>
 </div>
 
 <div class="nav">
     <div class="shopping-cart me-3">
         <i class="fa-solid fa-cart-shopping"></i>
-        <button class="items">0</button>
+        <button class="items" onclick="openPopup()">0</button>
     </div>
     <div class="sign"><button type="button" class="btn btn-primary">Get Started</button></div>
 </div>
@@ -61,7 +77,7 @@
           <p> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>12 Responses</p>
           <h2><b>Rose Hydrate Day Cream</b></h2>
               <p> A silky day cream that delivers lasting hydration and a soft, radiant glow</p>
-              <h1> <span class="currency">₹999</span>
+              <h1><span class="currency">₹</span><span class="currency rate">999</span>
               <!-- <span class="amount">₹1999</span></h1> -->
               <button class="buy">Add to cart</button>
         </div>
@@ -80,7 +96,7 @@
         
           <h2><b>Mnllioa Anti Blemish care</b></h2>
               <p>A refined formula that targets blemishes while keeping skin smooth and balanced</p>
-              <h1> <span class="currency">₹699</span>
+              <h1> <span class="currency">₹</span><span class="currency rate">699</span>
               <span class="amount">₹1499</span></h1>
               <button class="buy">Add to cart</button>
         </div>
@@ -98,7 +114,7 @@
           <p> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>300 Responses</p>
         <h2><b>Vitamin C Radiance Cream</b></h2>
               <p>Reveal naturally brighter, flawless skin with White Perfect Day CreamA brightening cream that enhances natural glow </p>
-              <h1> <span class="currency">₹499</span>
+              <h1> <span class="currency">₹</span><span class="currency rate">499</span>
               <!-- <span class="amount">₹1999</span></h1> -->
               <button class="buy">Add to cart</button>
         </div>
@@ -116,7 +132,7 @@
           <p> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star-half-stroke"></i>420 Responses</p>
         <h2><b>Age Renew Repair Cream</b></h2>
               <p>A rejuvenating cream designed to restore firmness and youthful-looking skin</p>
-              <h1> <span class="currency">₹499</span>
+              <h1><span class="currency">₹</span> <span class="currency rate">499</span>
               <span class="amount">₹1999</span></h1>
               <button class="buy">Add to cart</button>
         </div>
@@ -134,7 +150,7 @@
           <p> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star-half-stroke"></i> <i class="fa-regular fa-star"></i>120 Responses</p>
         <h2><b>Pure Hydration Moisture Cream</b></h2>
               <p>An intensely moisturizing cream that leaves skin plump, soft, and nourished</p>
-              <h1> <span class="currency">₹899</span>
+              <h1> <span class="currency">₹</span><span class="rate currency">899</span>
               <!-- <span class="amount">₹1999</span></h1> -->
               <button class="buy">Add to cart</button>
         </div>
@@ -152,7 +168,7 @@
           <p> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i> <i class="fa-regular fa-star"></i> <i class="fa-regular fa-star"></i>322 Responses</p>
         <h2><b>Herbal Nourish Cream</b></h2>
               <p>A nourishing blend that comforts skin and restores natural softness</p>
-              <h1> <span class="currency">₹639</span>
+              <h1> <span class="currency">₹</span><span class="currency rate">639</span>
               <span class="amount">₹799</span></h1>
               <button class="buy">Add to cart</button>
         </div>
@@ -170,7 +186,7 @@
           <p> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i>654 Responses</p>
         <h2><b>Ultra Lift Night Cream</b></h2>
               <p>A luxurious night cream that firms, smooths, and revitalizes skin overnight</p>
-              <h1> <span class="currency">₹499</span>
+              <h1> <span class="currency">₹</span><span class="currency rate">499</span>
               <span class="amount">₹2499</span></h1>
               <button class="buy">Add to cart</button>
         </div>
@@ -188,7 +204,7 @@
           <p> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>543 Responses</p>
         <h2><b>Hydra Fresh Gel Cream</b></h2>
               <p>Reveal naturally brighter, flawless skin with Hydra Fresh Gel Cream</p>
-              <h1> <span class="currency">₹2599</span>
+              <h1> <span class="currency">₹</span><span class="currency rate">2599</span>
               <!-- <span class="amount">₹1999</span></h1> -->
               <button class="buy">Add to cart</button>
         </div>

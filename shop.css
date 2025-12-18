@@ -35,6 +35,9 @@ body{
     color:white;
     height: 35px;
     font-size: 25px;
+    display: flex;
+    justify-self: center;
+    align-items: center;
 }
 
 .shopping-cart{
@@ -211,3 +214,51 @@ body{
     justify-content: center;
     align-items: center;
 }
+.popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+
+  /* Popup box */
+  .popup-content {
+    background: #fff;
+    width: 700px;
+    height: 700px;
+    padding: 20px;
+    border-radius: 8px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  /* Close button */
+  .close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  button {
+    padding: 10px 16px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  #products{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* background-color: pink; */
+  }
+  .div{
+    display: none;
+    text-decoration: solid;
+  }
