@@ -1,9 +1,14 @@
 const buyButtons = document.querySelectorAll(".buy");
-// const name=document.querySelectorAll("b").innerText
+
 const sample=document.getElementById("products")
 const item=document.querySelector('.items')
 const img=document.getElementById('empty')
 const empty=document.querySelector('.emptyCart')
+const search=document.querySelector('.form-control')
+const searchBtn=document.querySelector('.search-icon')
+ const namee=document.querySelectorAll("b")
+
+
 let count=Number(item.innerHTML)
 
 buyButtons.forEach(btn => {
@@ -13,8 +18,8 @@ buyButtons.forEach(btn => {
    
   const button = btn.closest('.info');
   const name=button.querySelector('b').textContent
-  // alert(button.querySelector('.rate').textContent)
   const rate=button.querySelector('.rate').textContent
+
   
   const addProduct=document.createElement('div')
    
@@ -33,7 +38,7 @@ buyButtons.forEach(btn => {
   productName.style.padding="10px"
 
   const price=document.createElement('div')
-  price.innerHTML=rate
+  price.innerHTML=`₹ ${rate}`
   price.style.border="1px solid black"
   price.style.padding="10px"
 
@@ -76,3 +81,41 @@ buyButtons.forEach(btn => {
   function closePopup() {
     document.getElementById("popup").style.display = "none";
   }
+
+
+ searchBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  const searchText = search.value.toLowerCase().trim();
+  const products = document.querySelectorAll(".product");
+
+  products.forEach((product) => {
+    const productName = product.querySelector("b").innerText.toLowerCase();
+
+    if (productName.includes(searchText)) {
+      product.style.display = "";   // show product
+    } else {
+      product.style.display = "none";    // hide product
+    }
+  });
+});
+
+
+const favourite=document.querySelectorAll('.favourite')
+favourite.forEach((btn)=>{
+  btn.addEventListener('click',(e)=>{
+    e.preventDefault()
+   const icon = btn.querySelector('i');
+
+    if (icon.classList.contains('fa-regular')) {
+      icon.classList.remove('fa-regular');
+      icon.classList.add('fa-solid');
+      icon.style.color = 'red';
+      icon.style.fontSize="20px"
+    } else {
+      icon.classList.remove('fa-solid');
+      icon.classList.add('fa-regular');
+      icon.style.color = 'red';
+    }
+  });
+});

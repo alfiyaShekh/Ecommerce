@@ -256,9 +256,6 @@ body{
     justify-content: center;
     align-items: center;
     width: 100%;
+    flex-direction: column;
     /* background-color: pink; */
-  }
-  .div{
-    display: none;
-    text-decoration: solid;
   }
