@@ -22,6 +22,7 @@ buyButtons.forEach(btn => {
 
   
   const addProduct=document.createElement('div')
+  const orderDiv=document.createElement('div')
    
    addProduct.style.display="flex"
    addProduct.style.marginTop='20px'
@@ -42,6 +43,10 @@ buyButtons.forEach(btn => {
   price.style.border="1px solid black"
   price.style.padding="10px"
 
+  const order=document.createElement('button')
+  order.innerHTML="order"
+  order.style.border="1px solid black"
+
   const removeProduct=document.createElement('div')
   const remove=document.createElement('button')
   remove.style.borderRadius='5px'
@@ -53,16 +58,45 @@ buyButtons.forEach(btn => {
 
   addProduct.appendChild(productName)
   addProduct.appendChild(price)
+
+  orderDiv.appendChild(order)
+  
   
   addProduct.appendChild(removeProduct)
  
   img.style.display="none"
   sample.appendChild(addProduct)
+  sample.appendChild(orderDiv)
   empty.innerHTML="cart Elements"
+
+  order.addEventListener("click", () => {
+  //   console.log("working");
+    
+  // fetch("http://localhost:3000/order", {
+  //   method: "POST",
+  //   headers: {
+  //     "Content-Type": "application/json"
+  //   },
+  //   body: JSON.stringify({
+  //     product_name: name,
+  //     price: rate
+  //   })
+  // })   
+  // .then(res => res.text())
+  // .then(data => {
+  //   alert(data);
+  // })
+  // .catch(err => {
+  //   alert("Order failed ❌");
+  // });
+   
+  alert("Order confirmed ✅")
+});
   
   remove.addEventListener('click',(e)=>{
     e.preventDefault()
     addProduct.remove()
+    orderDiv.remove()
     count=count-1
     item.innerHTML=count
     
@@ -119,3 +153,30 @@ favourite.forEach((btn)=>{
     }
   });
 });
+
+
+
+
+function sendMessage(e) {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+  fetch("http://localhost:3000/contact", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ name, email, message })
+  })
+  .then(res => res.text())
+  .then(data => {
+    alert("Message sent successfully ✅");
+  })
+  .catch(err => {
+    alert("Error ❌");
+  });
+}
+

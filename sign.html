@@ -249,10 +249,10 @@ input {
 				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 			</div>
 			<span>or use your email for registration</span>
-			<input type="text" placeholder="Name" />
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Password" />
-			<button>Sign Up</button>
+			<input type="text" id="signupName" placeholder="Name" />
+            <input type="email" id="signupEmail" placeholder="Email" />
+            <input type="password" id="signupPassword" placeholder="Password" />
+            <button type="button" onclick="signup()">Sign Up</button>
 		</form>
 	</div>
 	<div class="form-container sign-in-container">
@@ -264,10 +264,10 @@ input {
 				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 			</div>
 			<span>or use your account</span>
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Password" />
-			<a href="#">Forgot your password?</a>
-			<button>Sign In</button>
+			<input type="email" id="loginEmail" placeholder="Email" />
+            <input type="password" id="loginPassword" placeholder="Password" />
+			<!-- <a href="#">Forgot your password?</a> -->
+			<button type="button" onclick="login()">Sign In</button>
 		</form>
 	</div>
 	<div class="overlay-container">
@@ -289,6 +289,7 @@ input {
 
 </body>
 <script>
+
     const signUpButton = document.getElementById('signUp');
 const signInButton = document.getElementById('signIn');
 const container = document.getElementById('container');
@@ -300,5 +301,50 @@ signUpButton.addEventListener('click', () => {
 signInButton.addEventListener('click', () => {
 	container.classList.remove("right-panel-active");
 });
+
+
+
+// SIGNUP
+function signup() {
+  const name = document.getElementById("signupName").value;
+  const email = document.getElementById("signupEmail").value;
+  const password = document.getElementById("signupPassword").value;
+
+  fetch("http://localhost:3000/signup", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ name, email, password })
+  })
+  .then(res => res.text())
+  .then(data => {
+    alert(data);
+  });
+}
+
+
+// LOGIN
+function login() {
+  const email = document.getElementById("loginEmail").value;
+  const password = document.getElementById("loginPassword").value;
+
+  fetch("http://localhost:3000/login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ email, password })
+  })
+  .then(res => res.json())
+  .then(data => {
+    if (data.success) {
+      alert("Login Successful ✅");
+      window.location.href = "index.html"; // redirect
+    } else {
+      alert("Invalid Email or Password ❌");
+    }
+  });
+}
 </script>
 </html>
